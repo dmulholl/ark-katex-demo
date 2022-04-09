@@ -1,0 +1,42 @@
+---
+title: Home
+---
+
+Here's some inline Katex: \(1 + 2 = 3\). The paragraph continues on and on and on after the equation like this.
+
+And here's some block-level Katex:
+
+$$
+\int x^2 \cdot cos(x) \, dx
+$$
+
+Here's a block-level equation:
+
+\begin{equation}
+    1 + 2 = 3
+\end{equation}
+
+And another block-level equation:
+
+\begin{equation}
+    x + y = z
+\end{equation}
+
+And here's a matrix:
+
+$$
+\begin{pmatrix}
+   a & b \\
+   c & d
+\end{pmatrix}
+$$
+
+The matrix won't render without the `$$` wrappers, no idea why.
+
+One final equation for luck:
+
+\begin{equation}
+    e = m \cdot c^2
+\end{equation}
+
+And a final paragraph with no math markup.
