@@ -1,4 +1,4 @@
-# KaTeX Demo
+# Ivy KaTeX Demo
 
 Using KaTeX markup in an Ivy site.
 
