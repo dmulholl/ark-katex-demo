@@ -1,5 +1,8 @@
 # Ivy KaTeX Demo
 
-Using KaTeX markup in an Ivy site.
+[1]: https://github.com/dmulholl/ivy
+[2]: https://katex.org
 
-* Demo: http://www.dmulholl.com/demos/katex/
+A simple [Ivy][1] site that uses the [KaTeX][2] JavaScript library to render LaTeX markup.
+
+* Live Demo: http://www.dmulholl.com/demos/katex/

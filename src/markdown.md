@@ -1,10 +1,9 @@
 ---
-title: Syntext
-subtitle: This page is written in Syntext.
+title: Markdown
+subtitle: This page is written in Markdown.
 ---
 
-Here's some inline KaTeX: ``\(x^{2} + y^{2} = z^{2}\)``.
-It's wrapped in <code>&#96;&#96;verbatim&#96;&#96;</code> quotes.
+Here's some inline KaTeX: \\(x^{2} + y^{2} = z^{2}\\).
 The paragraph continues on after the equation like this.
 
 Here's some block-level KaTeX without any markup wrapping it:
@@ -13,32 +12,35 @@ $$
     \int x^2 \cdot cos(x) \, dx
 $$
 
-In general, you should wrap KaTeX markup in a `raw` block so the Syntext parser
-will ignore it.
+In general, you should wrap KaTeX markup in a block-level HTML tag so the
+Markdown parser will ignore it.
 
-Here's a block-level equation inside a `::: raw` tag:
+Here's a block-level equation inside a `<div>` tag:
 
-::: raw
+<div>
     \begin{equation}
         1 + 2 = 3
     \end{equation}
+</div>
 
-And here's a block-level equation inside a `:p raw` tag:
+Here's a block-level equation inside a `<p>` tag:
 
-:p raw
+<p>
     \begin{equation}
         x + y = z
     \end{equation}
+</p>
 
-Here's a matrix inside a `:p raw` tag:
+Here's a matrix inside a `<p>` tag:
 
-:p raw
+<p>
     $$
     \begin{pmatrix}
         a & b \\
         c & d
     \end{pmatrix}
     $$
+</p>
 
 The matrix won't render without the `$$` wrappers, even though the KaTeX
 documentation says it should.
