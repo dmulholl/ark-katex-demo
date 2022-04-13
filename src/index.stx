@@ -2,38 +2,43 @@
 title: Home
 ---
 
-Here's some inline Katex: \(1 + 2 = 3\). The paragraph continues on and on and on after the equation like this.
+Here's some inline KaTeX: ``\(x^{2} + y^{2} = z^{2}\)``. It's wrapped in <code>&#96;&#96;verbatim&#96;&#96;</code> quotes. The paragraph continues on after the equation like this.
 
-And here's some block-level Katex:
+Here's some block-level KaTeX without any markup wrapping it:
 
 $$
 \int x^2 \cdot cos(x) \, dx
 $$
 
-Here's a block-level equation:
+In general, you should wrap KaTeX markup in a `raw` block so Syntext won't try to parse its content as formatting instructions.
 
-\begin{equation}
-    1 + 2 = 3
-\end{equation}
+Here's a block-level equation inside a `::: raw` tag:
 
-And another block-level equation:
+::: raw
+    \begin{equation}
+        1 + 2 = 3
+    \end{equation}
 
-\begin{equation}
-    x + y = z
-\end{equation}
+And here's a block-level equation inside a `:p raw` tag:
 
-And here's a matrix:
+:p raw
+    \begin{equation}
+        x + y = z
+    \end{equation}
 
-$$
-\begin{pmatrix}
-   a & b \\
-   c & d
-\end{pmatrix}
-$$
+Here's a matrix inside a `:p raw` tag:
 
-The matrix won't render without the `$$` wrappers, no idea why.
+:p raw
+    $$
+    \begin{pmatrix}
+    a & b \\
+    c & d
+    \end{pmatrix}
+    $$
 
-One final equation for luck:
+The matrix won't render without the `$$` wrappers, even though the KaTeX documentation says it should.
+
+One final equation for luck, without any wrappers:
 
 \begin{equation}
     e = m \cdot c^2
