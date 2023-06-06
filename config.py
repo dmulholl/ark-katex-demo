@@ -13,4 +13,4 @@ theme = "graphite"
 title = "Katex Demo"
 
 # Site tagline.
-tagline = "Just another Ivy site."
+tagline = "Just another Ark site."
